@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+    <title>My Class Routine</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        input[type="text"] {
+            border: 2px solid green;
+        }
+
+        #page-title {
+            color: rgb(17, 93, 25);
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .para-center {
+            text-align: center;
+        }
+
+        .lab {
+            font-weight: bold;
+            color: darkred;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        th {
+            background-color: lightgreen;
+        }
+
+        tr:hover {
+            background-color: khaki;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <h1 id="page-title">Weekly Class Routine</h1>
+    <p class="para-center">
+        <img src="https://www.kaizenitbd.com/assets/images/popular_courses/1771313924.jpg" alt="Weekly Class Routine"
+            title="Web Technologies" width="400" height="200">
+    </p>
+
+    <table>
+
+
+        <thead>
+            <tr>
+                <th colspan="4">Class Schedule - Fall 2026</th>
+            </tr>
+        </thead>
+
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Course</th>
+                <th>Room</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+
+                <td rowspan="2"> Sunday</td>
+                <td>08:30 AM</td>
+                <td>Data Science(Theory)</td>
+                <td>DS0108</td>
+
+            </tr>
+            <tr class="lab">
+                <td>10:00 AM</td>
+                <td>Data Science (Lab) </td>
+                <td>DS0207</td>
+
+            </tr>
+
+            <tr>
+
+                <td> Tuesday</td>
+                <td>08:30 AM</td>
+                <td>Computer Networks(Theory)</td>
+                <td>DS0908</td>
+
+            </tr>
+            <tr class="lab">
+                <td> Thursday</td>
+                <td>10:00 AM</td>
+                <td>Computer Networks (Lab) </td>
+                <td>DS0207</td>
+
+            </tr>
+        </tbody>
+
+
+    </table>
+   <form action="/submit-feedback" method="post">
+    <fieldset>
+        <legend>Class Feedback</legend>
+
+        <!-- Full Name -->
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required minlength="3">
+        </div>
+        <br>
+
+        <!-- Email -->
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+
+        <!-- Class Date -->
+        <div>
+            <label for="classDate">Class Date:</label>
+            <input type="date" id="classDate" name="classDate" required>
+        </div>
+        <br>
+
+        <!-- Course (Datalist) -->
+        <div>
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" list="courseList" required>
+            <datalist id="courseList">
+                <option value="Introduction to Programming"></option>
+                <option value="Web Development"></option>
+                <option value="Database Systems"></option>
+            </datalist>
+        </div>
+        <br>
+
+        <!-- Rating -->
+        <div>
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        </div>
+        <br>
+
+        <!-- Class Type (Radio Buttons) -->
+        <div>
+            <span>Class Type:</span>
+            <input type="radio" id="typeTheory" name="classType" value="Theory" required>
+            <label for="typeTheory">Theory</label>
+            
+            <input type="radio" id="typeLab" name="classType" value="Lab" required>
+            <label for="typeLab">Lab</label>
+        </div>
+        <br>
+
+        <!-- Day -->
+        <div>
+            <label for="day">Day:</label>
+            <select id="day" name="day" required>
+                <option value="">Select a day</option>
+                <option value="Sunday">Sunday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Thursday">Thursday</option>
+            </select>
+        </div>
+        <br>
+
+        <!-- Comments -->
+        <div>
+            <label for="comments">Comments:</label>
+            <br>
+            <textarea id="comments" name="comments" rows="4" cols="30" required minlength="10"></textarea>
+        </div>
+        <br>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit">Send Feedback</button>
+        </div>
+
+    </fieldset>
+
+    </form>
+
+
+
+</body>
+
+
+
+</html>
